@@ -1,4 +1,5 @@
 # bootstrapvue-creative
+A general template bases on [startbootstrap-creative](https://github.com/StartBootstrap/startbootstrap-creative).
 
 ## Project setup
 ```

@@ -8,6 +8,7 @@ const routes = [
   {
     path: '/',
     name: '',
+    meta: { title: "公司名称" },
     component: Creative
   },
   {

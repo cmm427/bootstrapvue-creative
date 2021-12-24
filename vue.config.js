@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: "./",
   css: {
     loaderOptions: {
       // by default the `sass` option will apply to both syntaxes

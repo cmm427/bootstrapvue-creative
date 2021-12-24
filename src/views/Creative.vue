@@ -165,6 +165,33 @@
       </div>
     </section>
 
+    <!-- Footer1-->
+    <section class="page-section bg-dark text-white-75">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 mt-5 ps-5">
+            <h5 class="text-white">热门产品</h5>
+            <div class="mt-3 brandInfo" v-for="(item, index) in bottomInfo.products" :key="index">
+              <span>{{ item.name }}</span>
+            </div>
+          </div>
+          <div class="col-lg-3 mt-5 ps-5">
+            <h5 class="text-white">联系我们</h5>
+            <div class="mt-3 brandInfo" v-for="(item, index) in bottomInfo.contactInfo" :key="index">
+              <i :class="item.biClass"></i>
+              <span> {{ item.content }}</span>
+            </div>
+          </div>
+          <div class="col-lg-3 mt-5 ps-5">
+            <h5 class="text-white">关注我们</h5>
+            <div class="mt-3 brandInfo" v-for="(item, index) in bottomInfo.mediaInfo" :key="index">
+              <span> {{ item.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer-->
     <footer class="bg-light py-5">
       <div class="container px-4 px-lg-5">
@@ -262,6 +289,60 @@ export default {
           portfolioThumbnails: require('@/assets/img/portfolio/thumbnails/6.jpg')
         }
       ],
+      bottomInfo: {
+        brandInfo: {
+          name: "公司名称",
+          img: ""
+        },
+        products: [
+          {
+            name: "短信服务",
+            link: ""
+          },
+          {
+            name: "日志服务",
+            link: ""
+          },
+          {
+            name: "存储服务",
+            link: ""
+          },
+          {
+            name: "使用文档",
+            link: ""
+          },
+          {
+            name: "快速上手",
+            link: ""
+          }
+        ],
+        contactInfo: [
+          {
+            biClass: "bi bi-geo-alt",
+            content: "中国北京市东城区某某大厦8-818室" 
+          },
+          {
+            biClass: "bi bi-telephone",
+            content: "400XXX8888" 
+          },
+          {
+            biClass: "bi bi-envelope",
+            content: "business@company.com" 
+          }
+        ],
+        mediaInfo: [
+          {
+            name: "微博",
+            content: "",
+            image: ""
+          },
+          {
+            name: "微信",
+            content: "",
+            image: ""
+          },
+        ]
+      },
       footerInfo: {
         ICPName: '江B2-20200101-1',
         ICPLink: '',
@@ -271,3 +352,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.brandInfo {
+  >span {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  &:hover {
+    color: $white;
+  }
+}
+</style>
